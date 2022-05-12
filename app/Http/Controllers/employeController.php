@@ -69,5 +69,24 @@ class employeController extends Controller
         $employe->save();
         return redirect(route('liste_employe'));
     }
+    public function view (Request $request)
+    {
+        $employe = employe::find($request->id);
+        $employe->nom->input('nom');
+        $employe->prenom->input('prenom');
+        $employe->sexe ->input('sexe');
+        $employe->contrat ->input('contrat');
+        $employe->date_naissance ->input('date_naissance');
+        $employe->debut ->input('debut');
+        $employe->poste ->input('poste');
+        $employe->departement ->input('departement');
+        $employe->lieu_naissance ->input('lieu_naissance');
+        $employe->numero_cni ->input('numero_cni');
+        $employe->email ->input('email');
+        $employe->tel ->input('tel');
+        $employe->situation_marital ->input('situation_marital');
+        $employe->save();
+        return redirect(route('liste_employe'));
+    }
 
 }
