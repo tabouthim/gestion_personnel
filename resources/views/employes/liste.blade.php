@@ -175,6 +175,7 @@
                                             @endforeach
                                         </tbody>
                                     </table>
+                                    {{$employes->links()}}
                                 </div>
                             </div>
                         </div>
@@ -207,7 +208,7 @@
                     type: 'get',  // http method
                     success: function (data, status, xhr) {
                         $('#bloc_modal').html(data);
-                        $('#viewModalEmploye').modal("show");
+                        $('#userview').modal("show");
                     },
                     error: function (jqXhr, textStatus, errorMessage) {
                         $('p').append('Error' + errorMessage);
@@ -220,7 +221,7 @@
                 $.ajax('{{url('/employe/destroy')}}/' + $(this).attr('data-id'), {
                     type: 'get',  // http method
                     success: function (data, status, xhr) {
-                        $('#modal').html(data);
+                        $('#bloc_modal').html(data);
                         $('#DeleteModalEmploye').modal("show");
                     },
                     error: function (jqXhr, textStatus, errorMessage) {

@@ -1,10 +1,10 @@
-<div id="viewModalEmploye" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div id="userview" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <form method="post" action="{{route('employe.view')}}">
         {{ csrf_field() }}
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="myModalLabel">information sur l'employe {{$employe->nom}}</h5>
+                    <h5 class="modal-title" id="myModalLabel">information sur l'employe</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <input type="hidden" id="id" name="id" value="{{$employe->id}}">
@@ -57,8 +57,7 @@
                     <input type="tel" name="tel" id="tel" value="{{$employe->tel}}">
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-light waves-effect" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary waves-effect waves-light">modifier</button>
+                    <button type="submit" class="btn btn-primary waves-effect waves-light">fermer</button>
                 </div>
             </div>
         </div>

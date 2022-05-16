@@ -32,7 +32,7 @@
 
 
         <!-- Modal -->
-        <div id="modalli" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <form method="post" action="{{route('create.licenciement')}}">
                 {{ csrf_field() }}
                 <div class="modal-dialog">
@@ -42,14 +42,18 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <label for="nom">Nom de l'employer</label>
+                            <label for="nom">Nom </label>
                             <input autocomplete="off"  type="text" name="nom" id="nom" class="form-control">
-                            <label for="nom">prenom</label>
-                            <input autocomplete="off"  type="text" name="nom" id="nom" class="form-control">
-                            <label for="nom">date de prise de fonction</label>
-                            <input autocomplete="off"  type="text" name="nom" id="nom" class="form-control">
-                            <label for="nom">motif du licenciement</label>
-                            <input autocomplete="off"  type="text" name="nom" id="nom" class="form-control">
+                            <label for="nom">poste</label>
+                            <input autocomplete="off"  type="text" name="poste" id="poste" class="form-control">
+                            <label style="width: 150px"> motif</label>
+                            <select name="motif">
+                                <option>vole</option>
+                                <option>retard abusif</option>
+                                <option>inaptitude</option>
+                                <option>manque de professionnalisme</option>
+                                <option>autres</option>
+                            </select><br>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-light waves-effect" data-bs-dismiss="modal">Close</button>
@@ -76,19 +80,17 @@
                             <tr>
                                 <th>ID</th>
                                 <th>NOM</th>
-                                <th>PRENOM</th>
-                                <Th>date de prise de fonction</Th>
+                                <th>POSTE</th>
                                 <th>MOTIF</th>
                                 <th>ACTION</th>
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($licenciement as $key => $licenciement)
+                            @foreach($licenciements as $key => $licenciement)
                                 <tr>
                                     <td>{{$key+1}}</td>
                                     <td>{{$licenciement->nom}}</td>
-                                    <td>{{$licenciement->prenom}}</td>
-                                    <td>{{$licenciement->date_de_debut}}</td>
+                                    <td>{{$licenciement->poste}}</td>
                                     <td>{{$licenciement->motif}}</td>
                                     <td class="text-center">
                                         <div class="col-xl-2 col-lg-2 col-md-4 col-sm-6 col-6">
@@ -96,15 +98,13 @@
                                                 <i class="fa fa-edit"></i>
                                             </a>
 
-                                            <a class="delete-modal " data-id="{{$licenciement->id}}" style="color: red" class="btn btn-xs btn-red btn-icon-only width-auto">
-                                                <i class='fa fa-trash'></i>
-                                            </a>
                                         </div>
                                     </td>
                                 </tr>
                             @endforeach
                             </tbody>
                         </table>
+                        {{$licenciements->links()}}
                     </div>
                 </div>
 
@@ -113,5 +113,24 @@
     </div>
 
 
+@endsection
 
+
+@section('scripts')
+    <script>
+        $( document ).ready(function() {
+            $(document).on('click', '.edit-modal', function () {
+                $.ajax('{{url('/licenciement/show')}}/' + $(this).attr('data-id'), {
+                    type: 'get',  // http method
+                    success: function (data, status, xhr) {
+                        $('#bloc_modal').html(data);
+                        $('#updateModalLicenciement').modal("show");
+                    },
+                    error: function (jqXhr, textStatus, errorMessage) {
+                        $('p').append('Error' + errorMessage);
+                    }
+                });
+            });
+        });
+    </script>
 @endsection

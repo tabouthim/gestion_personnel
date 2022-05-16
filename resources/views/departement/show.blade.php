@@ -7,6 +7,8 @@
                     <h5 class="modal-title" id="myModalLabel">Modifier departement</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+                <input type="hidden" id="id" name="id" value="{{$employe->id}}">
+
                 <div class="modal-body">
                     <label for="nom">Nom du departement</label>
                     <input autocomplete="off"  type="text" value="{{$departement->nom}}" name="nom" id="nom" class="form-control">

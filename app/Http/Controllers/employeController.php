@@ -11,7 +11,7 @@ class employeController extends Controller
 {
     public function employe()
     {
-        $employes= Employe::all();
+        $employes= employe::paginate(5);
         return view('employes.liste',['employes' => $employes]);
     }
     public function save_employe(Request $request)
@@ -67,7 +67,7 @@ class employeController extends Controller
         $employe->tel = $request->input('tel');
         $employe->situation_marital = $request->input('situation_marital');
         $employe->save();
-        return redirect(route('liste_employe'));
+        return redirect(route('liste_employe'))/*->line('modification effectuée avec succes !')*/;
     }
     public function view (Request $request)
     {

@@ -331,6 +331,12 @@
                             <span>Tableau de bord</span>
                         </a>
                     </li>
+                    <li>
+                        <a href="{{url('conge')}}" class=" waves-effect">
+                            <i class="ri-calendar-2-line"></i>
+                            <span>  conges</span>
+                        </a>
+                    </li>
 
                     <li>
                         <a href="{{url('annuaireemployes')}}" class=" waves-effect">
@@ -340,14 +346,10 @@
                     </li>
 
                     <li>
-                        <a href="#" class="has-arrow waves-effect">
+                        <a href="{{url('licenciement')}}" class="waves-effect">
                             <i class="ri-mail-send-line"></i>
-                            <span>recrutment/licenciement</span>
+                            <span>licenciement</span>
                         </a>
-                        <ul class="sub-menu" aria-expanded="false">
-                            <li><a href="{{url('recrutement')}}">recrutement</a></li>
-                            <li><a href="{{url('licenciement')}}">licenciement</a></li>
-                        </ul>
                     </li>
                     <li>
                         <a href="{{url('tableaudepresence')}}" class=" waves-effect">
@@ -355,12 +357,15 @@
                             <span>Tableaux de présence</span>
                         </a>
                     </li>
-
                     <li>
-                        <a href="{{url('gestiondepaie')}}" class=" waves-effect">
-                            <i class="ri-profile-line"></i>
-                            <span>Gestion de la paie</span>
+                        <a href="#" class="has-arrow waves-effect">
+                            <i class="bi bi-currency-exchange"></i>
+                            <span>paie</span>
                         </a>
+                        <ul class="sub-menu" aria-expanded="false">
+                            <li><a href="{{url('salaire')}}">definir un salaire</a></li>
+                            <li><a href="{{url('paiement')}}">feuille de paiement</a></li>
+                        </ul>
                     </li>
 
                     <li>
@@ -377,18 +382,12 @@
                     </li>
 
                     <li>
-                        <a href="#" class="has-arrow waves-effect">
+                        <a href="{{url('auth')}}">
                             <i class="ri-account-circle-line"></i>
-                            <span>Authentication</span>
-                        </a>
-                        <ul class="sub-menu" aria-expanded="false">
-                            <li><a href="{{url('auth')}}">Login</a></li>
-                            <li><a href="auth-register.html">Register</a></li>
-                            <li><a href="auth-recoverpw.html">Recover Password</a></li>
-                            <li><a href="auth-lock-screen.html">Lock Screen</a></li>
-                        </ul>
-                    </li>
+                            <span>Lock Screen</span>
 
+                        </a>
+                    </li>
                 </ul>
             </div>
             <!-- Sidebar -->
@@ -407,7 +406,7 @@
         <footer class="footer">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-6">
+                    <div class="col-sm-6" style="text-align:end">
                         <script >document.write(new Date().getFullYear())</script>© NUSYCE.
                     </div>
 

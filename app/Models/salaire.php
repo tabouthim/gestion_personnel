@@ -5,17 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class conge extends Model
+class salaire extends Model
 {
-    protected $table = 'conge';
+    protected $table = 'salaire';
     public $timestamps = false;
     use HasFactory;
     protected $fillable = [
-        'employe',
-        'type_conge',
-        'date_debut',
-        'date_fin',
-        'statut',
-        'total_jour',
-    ];
+        'nom',
+        'type_salaire',
+        'montant',
+        'montant_net',
+        ];
 }

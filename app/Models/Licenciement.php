@@ -12,8 +12,7 @@ class Licenciement extends Model
     use HasFactory;
     protected $fillable = [
         'nom',
-        'prenom',
-        'sexe',
-        'motif'
+        'poste',
+        'motif',
     ];
 }

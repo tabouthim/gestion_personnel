@@ -12,39 +12,51 @@ class congeController extends Controller
 {
     public function conge()
     {
-        $conges= conge::all();
-        return view('conge.liste',['conges' => $conges]);
+        $conges= conge::paginate(5);
+        return view('conges.liste',['conges' => $conges]);
     }
     public function save_conge(Request $request)
     {
         $conge = new conge();
-        $conge->nom = $request->nom;
+        $conge->employe = $request->employe;
+        $conge->type_conge=$request->type_conge;
+        $conge->date_debut = $request->date_debut;
+        $conge->date_fin = $request->date_fin;
+        $conge->statut = $request->statut;
+        $conge->total_jour = $request->total_jour;
         $conge->save();
-        return  redirect(route('liste_conges'));
+        return  redirect(route('liste_conge'));
     }
-    public function show($id)
-    {
-        $conge = conge::find($id);
-        return view('departement.show', ["conge" => $conge]);
-    }
-    public function update (Request $request)
-    {
-        $conge = conge::find($request->id);
-        $conge->nom = $request->input('nom');
-        $conge->save();
-        return redirect(route('liste_conges'));
-    }
-    Public function showDelete ($id)
+    Public function showDelete($id)
     {
         $conge=conge::find($id);
 
-        return view('conge.delete',["conge"=>$conge]);
+        return view('conges.delete',["conge"=>$conge]);
     }
+
     public function delete(Request $request)
     {
         $conge = conge::find($request->id);
         $conge->delete();
-        return redirect(route('liste_conges'));
+        return redirect(route('liste_conge'));
+    }
+    public function show($id)
+    {
+        $conge= conge::find($id);
+        return view('conges.show', ["conge" => $conge]);
+    }
+
+    public function update (Request $request)
+    {
+        $conge = conge::find($request->id);
+        $conge->employe = $request->input('employe');
+        $conge->type_conge = $request->input('type_conge');
+        $conge->date_debut = $request->input('date_debut');
+        $conge->date_fin = $request->input('date');
+        $conge->statut = $request->input('statut');
+        $conge->total_jour = $request->input('total_jour');
+        $conge->save();
+        return redirect(route('liste_conge'));
     }
 
 }

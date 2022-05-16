@@ -12,7 +12,7 @@ class departementController extends Controller
 {
     public function departement()
     {
-        $departements= Departement::all();
+        $departements= departement::paginate(5);
         return view('departement.liste',['departements' => $departements]);
     }
     public function save_departement(Request $request)
@@ -34,6 +34,12 @@ class departementController extends Controller
         $departement->save();
         return redirect(route('liste_departements'));
     }
+    public function search()
+    {
+       $search_text = $_GET['query'];
+        $departement =departement::where('NOM','LIKE','%'.$search_text.'%')->get();
+        return view('departement.liste',["departement"=>$departement]);
+    }
     Public function showDelete ($id)
     {
         $departement=departement::find($id);
@@ -46,5 +52,16 @@ class departementController extends Controller
         $departement->delete();
         return redirect(route('liste_departements'));
     }
+    public function destroy(Request $request)
+    {
+        Evenement::where('id', $request->id)
+            ->delete();
+
+        return response()->json([
+            'success' => true,
+            'message' => 'Event removed successfully.'
+        ]);
+    }
+
 
 }

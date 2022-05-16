@@ -7,6 +7,7 @@
                     <h5 class="modal-title text-center" id="myModalLabel">supprimer</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+                <input type="hidden" id="id" name="id" value="{{$departement->id}}">
                 <div class="modal-body">
                     <p  class="text-center">
                         voulez vous reelement supprimer le departement :<div style="color: #cc8500;text-align: center">{{$departement->nom}}?</div>

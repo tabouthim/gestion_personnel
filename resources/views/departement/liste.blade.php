@@ -30,6 +30,19 @@
             </a>
         </div>
 
+        <div class="col-md-4" style="margin-left: 728px">
+            <form action={{url('/search')}} method="get">
+                <div  class="input-group">
+                    <input type="search" name="query" class="form-control">
+                    <span class="input-group-prepend">
+                        <button type="submit" class="btn btn-primary">
+                            search
+                        </button>
+                    </span>
+                </div>
+            </form>
+        </div>
+
 
         <!-- Modal -->
         <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -94,6 +107,7 @@
                                         @endforeach
                                         </tbody>
                                 </table>
+                            {{$departements->links()}}
                         </div>
                     </div>
 
@@ -120,7 +134,6 @@
                         $('p').append('Error' + errorMessage);
                     }
                 });
-
             });
 
             $(document).on('click', '.delete-modal', function () {
