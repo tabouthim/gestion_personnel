@@ -352,7 +352,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{url('tableaudepresence')}}" class=" waves-effect">
+                        <a href="{{url('presence')}}" class=" waves-effect">
                             <i class="ri-layout-3-line"></i>
                             <span>Tableaux de présence</span>
                         </a>
@@ -380,7 +380,6 @@
                             <span>departement</span>
                         </a>
                     </li>
-
                     <li>
                         <a href="{{url('auth')}}">
                             <i class="ri-account-circle-line"></i>

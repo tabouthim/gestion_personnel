@@ -349,7 +349,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="TableauDePresence.blade.php" class=" waves-effect">
+                        <a href="presence/liste.blade.php" class=" waves-effect">
                             <i class="ri-layout-3-line"></i>
                             <span> Tableaux de présence</span>
                         </a>

@@ -52,16 +52,5 @@ class departementController extends Controller
         $departement->delete();
         return redirect(route('liste_departements'));
     }
-    public function destroy(Request $request)
-    {
-        Evenement::where('id', $request->id)
-            ->delete();
-
-        return response()->json([
-            'success' => true,
-            'message' => 'Event removed successfully.'
-        ]);
-    }
-
 
 }

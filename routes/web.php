@@ -82,3 +82,9 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
 
 
 /* fin authentification*/
+
+
+/* debut des routes du presence */
+Route::get('/presence','App\Http\Controllers\presenceController@presence' )->name('liste_presence');
+Route::post('/presence/create','App\Http\Controllers\presenceController@save_presence')->name('create.presence');
+/* fin des routes du presence */
