@@ -363,7 +363,7 @@
                     </li>
 
                     <li>
-                        <a href="HeureDeTravail.blade.php" class=" waves-effect">
+                        <a href="heure.blade.php/liste.blade.php" class=" waves-effect">
                             <i class="ri-pencil-ruler-2-line"></i>
                             <span>Heures de travail</span>
                         </a>
