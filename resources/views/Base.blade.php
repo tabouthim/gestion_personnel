@@ -51,12 +51,12 @@
                                 </span>
                     </a>
 
-                    <a href="index.html" class="logo logo-light">
+                    <a href="tableaudebord" class="logo logo-light">
                                 <span class="logo-sm">
-                                    <img src="assets/images/logo-sm.png" alt="logo-sm-light" height="22">
+                                    <img src="assets/images/index.jpg" alt="logo-sm-light" height="22">
                                 </span>
-                        <span class="logo-lg">
-                                    <img src="assets/images/logo-light.png" alt="logo-light" height="20">
+                                <span class="logo-lg">
+                                    <img src="assets/images/users/index.jpg" alt="NUSYCE" height="20">
                                 </span>
                     </a>
                 </div>
@@ -381,9 +381,9 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{url('auth')}}">
+                        <a href="login">
                             <i class="ri-account-circle-line"></i>
-                            <span>Lock Screen</span>
+                            <span>deconnexion</span>
 
                         </a>
                     </li>

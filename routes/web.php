@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\EvenementController;
+use App\Http\Controllers\authentificationController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,16 +14,16 @@ use App\Http\Controllers\EvenementController;
 |
 */
 
-Route::get('/tableaudebord', 'App\Http\Controllers\tableaudebordController@dashbord')->name('tableau_de_bord');
-Route::get('/annuaireemployes','App\Http\Controllers\employesController@employe' );
-Route::get('/gestiondepaie', 'App\Http\Controllers\gestiondepaieController@paie');
-Route::get('/salaire', 'App\Http\Controllers\salaireController@salaire');
-Route::get('/heuredetravail', 'App\Http\Controllers\heuredetravailController@heure');
-Route::get('/licenciement','App\Http\Controllers\licenciementController@licenciement');
-Route::get('/tableaudepresence', 'App\Http\Controllers\tableaudepresenceController@presence');
-Route::get('/conge','App\Http\Controllers\congeController@conge');
-Route::get('/emploie','App\Http\Controllers\emploieController@emploie');
-Route::get('/evenement', 'App\Http\Controllers\evenementController@evenement');
+Route::get('/tableaudebord', 'App\Http\Controllers\tableaudebordController@dashbord')->name('tableau_de_bord')->middleware('isLoggedIn');
+Route::get('/annuaireemployes','App\Http\Controllers\employesController@employe' )->middleware('isLoggedIn');
+Route::get('/gestiondepaie', 'App\Http\Controllers\gestiondepaieController@paie')->middleware('isLoggedIn');
+Route::get('/salaire', 'App\Http\Controllers\salaireController@salaire')->middleware('isLoggedIn');
+Route::get('/heuredetravail', 'App\Http\Controllers\heuredetravailController@heure')->middleware('isLoggedIn');
+Route::get('/licenciement','App\Http\Controllers\licenciementController@licenciement')->middleware('isLoggedIn');
+Route::get('/tableaudepresence', 'App\Http\Controllers\tableaudepresenceController@presence')->middleware('isLoggedIn');
+Route::get('/conge','App\Http\Controllers\congeController@conge')->middleware('isLoggedIn');
+Route::get('/emploie','App\Http\Controllers\emploieController@emploie')->middleware('isLoggedIn');
+Route::get('/evenement', 'App\Http\Controllers\evenementController@evenement')->middleware('isLoggedIn');
 
 /* debut des routes du departement */
 route::get('/search','App\Http\Controllers\departementController@search');
@@ -76,9 +77,12 @@ route::post('/salaire/update','App\Http\Controllers\salaireController@update')->
 
 
 /*authentification*/
-Auth::routes();
-
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+route::get('/',[authentificationController::class,'login']);
+route::get('/login',[authentificationController::class,'login']);
+route::get('/registration',[authentificationController::class,'registration']);
+route::post('/register-user',[authentificationController::class,'registerUser'])->name('register-user');
+route::post('/login-user',[authentificationController::class,'loginUser'])->name('login-user');
+route::get('/logout',[authentificationController::class,'logout']);
 
 
 /* fin authentification*/
