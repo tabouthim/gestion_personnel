@@ -300,6 +300,7 @@
 
             </div>
         </div>
+        </div>
     </header>
 
     <!-- ========== Left Sidebar Start ========== -->
@@ -363,7 +364,7 @@
                     </li>
 
                     <li>
-                        <a href="heure.blade.php/liste.blade.php" class=" waves-effect">
+                        <a href="heure/liste.blade.php" class=" waves-effect">
                             <i class="ri-pencil-ruler-2-line"></i>
                             <span>Heures de travail</span>
                         </a>

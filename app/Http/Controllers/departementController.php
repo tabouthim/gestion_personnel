@@ -12,6 +12,14 @@ class departementController extends Controller
 {
     public function departement()
     {
+        $search=request()->query('search');
+    if ($search){
+       $departements= departement::where('nom','LIKE',"%{$search}%")->simplePaginate(1);
+    }else{
+        $departements=departement::simplePaginate(3);
+    }
+
+
         $departements= departement::paginate(5);
         return view('departement.liste',['departements' => $departements]);
     }

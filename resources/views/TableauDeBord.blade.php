@@ -30,80 +30,47 @@
                 </div>
                 <!-- end page title -->
 
-                <div class="row">
-                    <div class="col-xl-3 col-md-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex">
-                                    <div class="flex-grow-1">
-                                        <p class="text-truncate font-size-14 mb-2">Total departement</p>
-                                        <h4 class="mb-2">1452</h4>
-                                        <p class="text-muted mb-0"><span class="text-success fw-bold font-size-12 me-2"><i class="ri-arrow-right-up-line me-1 align-middle"></i>9.23%</span>from previous period</p>
-                                    </div>
-                                    <div class="avatar-sm">
-                                                <span class="avatar-title bg-light text-primary rounded-3">
-                                                    <i class="ri-shopping-cart-2-line font-size-24"></i>
-                                                </span>
-                                    </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+                                <div class="card-header">employers</div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Primary card title</h5>
                                 </div>
-                            </div><!-- end cardbody -->
-                        </div><!-- end card -->
-                    </div><!-- end col -->
-                    <div class="col-xl-3 col-md-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex">
-                                    <div class="flex-grow-1">
-                                        <p class="text-truncate font-size-14 mb-2">nombre d'employer absent</p>
-                                        <h4 class="mb-2">938</h4>
-                                        <p class="text-muted mb-0"><span class="text-danger fw-bold font-size-12 me-2"><i class="ri-arrow-right-down-line me-1 align-middle"></i>1.09%</span>from previous period</p>
-                                    </div>
-                                    <div class="avatar-sm">
-                                                <span class="avatar-title bg-light text-success rounded-3">
-                                                    <i class="mdi mdi-currency-usd font-size-24"></i>
-                                                </span>
-                                    </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card text-white bg-secondary mb-3" style="max-width: 18rem;">
+                                <div class="card-header">departement</div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Secondary card title</h5>
                                 </div>
-                            </div><!-- end cardbody -->
-                        </div><!-- end card -->
-                    </div><!-- end col -->
-                    <div class="col-xl-3 col-md-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex">
-                                    <div class="flex-grow-1">
-                                        <p class="text-truncate font-size-14 mb-2">total d'employe</p>
-                                        <h4 class="mb-2">8246</h4>
-                                        <p class="text-muted mb-0"><span class="text-success fw-bold font-size-12 me-2"><i class="ri-arrow-right-up-line me-1 align-middle"></i>16.2%</span>from previous period</p>
-                                    </div>
-                                    <div class="avatar-sm">
-                                                <span class="avatar-title bg-light text-primary rounded-3">
-                                                    <i class="ri-user-3-line font-size-24"></i>
-                                                </span>
-                                    </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
+                                <div class="card-header">licenciement</div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Danger card title</h5>
                                 </div>
-                            </div><!-- end cardbody -->
-                        </div><!-- end card -->
-                    </div><!-- end col -->
-                    <div class="col-xl-3 col-md-6">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="d-flex">
-                                    <div class="flex-grow-1">
-                                        <p class="text-truncate font-size-14 mb-2">nombre d'employe licencier</p>
-                                        <h4 class="mb-2">29670</h4>
-                                        <p class="text-muted mb-0"><span class="text-success fw-bold font-size-12 me-2"><i class="ri-arrow-right-up-line me-1 align-middle"></i>11.7%</span>from previous period</p>
-                                    </div>
-                                    <div class="avatar-sm">
-                                                <span class="avatar-title bg-light text-success rounded-3">
-                                                    <i class="mdi mdi-currency-btc font-size-24"></i>
-                                                </span>
-                                    </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
+                                <div class="card-header">conges</div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Success card title</h5>
                                 </div>
-                            </div><!-- end cardbody -->
-                        </div><!-- end card -->
-                    </div><!-- end col -->
-                </div><!-- end row -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
 
                 <div class="row">
                     <div class="col-xl-6">
@@ -126,33 +93,7 @@
 
                                 <div class="text-center pt-3">
                                     <div class="row">
-                                        <div class="col-sm-4 mb-3 mb-sm-0">
-                                            <div class="d-inline-flex">
-                                                <h5 class="me-2">25,117</h5>
-                                                <div class="text-success font-size-12">
-                                                    <i class="mdi mdi-menu-up font-size-14"> </i>2.2 %
-                                                </div>
-                                            </div>
-                                            <p class="text-muted text-truncate mb-0">Marketplace</p>
-                                        </div><!-- end col -->
-                                        <div class="col-sm-4 mb-3 mb-sm-0">
-                                            <div class="d-inline-flex">
-                                                <h5 class="me-2">$34,856</h5>
-                                                <div class="text-success font-size-12">
-                                                    <i class="mdi mdi-menu-up font-size-14"> </i>1.2 %
-                                                </div>
-                                            </div>
-                                            <p class="text-muted text-truncate mb-0">Last Week</p>
-                                        </div><!-- end col -->
-                                        <div class="col-sm-4">
-                                            <div class="d-inline-flex">
-                                                <h5 class="me-2">$18,225</h5>
-                                                <div class="text-success font-size-12">
-                                                    <i class="mdi mdi-menu-up font-size-14"> </i>1.7 %
-                                                </div>
-                                            </div>
-                                            <p class="text-muted text-truncate mb-0">Last Month</p>
-                                        </div><!-- end col -->
+
                                     </div><!-- end row -->
                                 </div>
                             </div>

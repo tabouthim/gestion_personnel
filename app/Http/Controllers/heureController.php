@@ -3,14 +3,14 @@
 namespace App\Http\Controllers;
 
 
-use App\Models\heuredetravail;
+use App\Models\heure;
 
 use Faker\Guesser\Name;
 use http\Env\Response;
 
 use Illuminate\Http\Request;
 
-class heuredetravailController extends Controller
+class heureController extends Controller
 {
     public function heure()
     {
@@ -18,19 +18,19 @@ class heuredetravailController extends Controller
         return view('heure.liste', ['heures' => $heures]);
     }
 
-    public function save_departement(Request $request)
+    public function save_heure(Request $request)
     {
         $heure = new heure();
-        $heure->nom = $request->nom;
+        $heure->employe = $request->employe;
+        $heure->date = $request->date;
+        $heure->heure_debut = $request->heure_debut;
+        $heure->heure_fin = $request->heure_fin;
+        $heure->total = $request->total;
         $heure->save();
-        return redirect(route('liste_heures'));
+        return redirect(route('liste_heure'));
     }
 
-    public function show($id)
-    {
-        $heure = heure::find($id);
-        return view('heure.show', ["heure" => $heure]);
-    }
+
 }
 
 

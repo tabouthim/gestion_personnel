@@ -92,3 +92,10 @@ route::get('/logout',[authentificationController::class,'logout']);
 Route::get('/presence','App\Http\Controllers\presenceController@presence' )->name('liste_presence');
 Route::post('/presence/create','App\Http\Controllers\presenceController@save_presence')->name('create.presence');
 /* fin des routes du presence */
+
+
+/* debut des routes heure de travail */
+Route::get('/heure','App\Http\Controllers\heureController@heure' )->name('liste_heure');
+Route::post('/heure/create','App\Http\Controllers\heureController@save_heure')->name('create.heure');
+
+/*fin des routes du heure de travail*/

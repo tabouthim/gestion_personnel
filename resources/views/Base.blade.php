@@ -100,7 +100,7 @@
                     <div class="dropdown d-none d-sm-inline-block">
                         <button type="button" class="btn header-item waves-effect"
                                 data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <img class="" src="assets/images/flags/us.jpg" alt="Header Language" height="16">
+                            <img class="" src="assets/images/flags/french.jpg" alt="Header Language" height="16">
                         </button>
                         <div class="dropdown-menu dropdown-menu-end">
 
@@ -286,7 +286,7 @@
                             <a class="dropdown-item" href="#"><i class="ri-user-line align-middle me-1"></i> Profile</a>
                             <a class="dropdown-item" href="#"><i class="ri-wallet-2-line align-middle me-1"></i> My Wallet</a>
                             <a class="dropdown-item d-block" href="#"><span class="badge bg-success float-end mt-1">11</span><i class="ri-settings-2-line align-middle me-1"></i> Settings</a>
-                            <a class="dropdown-item" href="#"><i class="ri-lock-unlock-line align-middle me-1"></i> Lock screen</a>
+                            <a class="dropdown-item" href="/login"><i class="ri-lock-unlock-line align-middle me-1"></i> Lock screen</a>
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item text-danger" href="#"><i class="ri-shut-down-line align-middle me-1 text-danger"></i> Logout</a>
                         </div>
@@ -357,20 +357,18 @@
                             <span>Tableaux de présence</span>
                         </a>
                     </li>
+
                     <li>
-                        <a href="#" class="has-arrow waves-effect">
+                        <a href="{{url('salaire')}}" class="bi bi-currency-exchange">
                             <i class="bi bi-currency-exchange"></i>
-                            <span>paie</span>
+                            <span>definir un salaire</span>
                         </a>
-                        <ul class="sub-menu" aria-expanded="false">
-                            <li><a href="{{url('salaire')}}">definir un salaire</a></li>
-                            <li><a href="{{url('paiement')}}">feuille de paiement</a></li>
-                        </ul>
                     </li>
 
                     <li>
-                        <a href="{{url('heuredetravail')}}" class=" waves-effect">
+                        <a href="{{url('heure')}}" class=" waves-effect">
                             <i class="ri-pencil-ruler-2-line"></i>
+                            <span class="badge rounded-pill bg-success float-end"></span>
                             <span>Heures de travail</span>
                         </a>
                     </li>
